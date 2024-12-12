@@ -1,12 +1,11 @@
 {
   "manifest_version": 2,
-  "name": "Extrator Infoseg",
-  "version": "2.3",
-  "description": "Extrai elementos do Infoseg para tratamento",
+  "name": "Renovador sessão Infoseg",
+  "version": "1.1",
+  "description": "Renovador sessão Infoseg.",
   "permissions": [
     "activeTab",
-    "storage",
-    "downloads"
+    "https://infoseg.sinesp.gov.br/infoseg2/*"
   ],
   "background": {
     "scripts": ["background.js"],
@@ -14,16 +13,8 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://infoseg.sinesp.gov.br/infoseg2/*"],
       "js": ["content.js"]
     }
-  ],
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
-  },
-  "icons": {
-    "48": "icon.png",
-    "128": "icon.png"
-  }
+  ]
 }
