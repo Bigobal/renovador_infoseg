@@ -1,11 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "Renovador sessão Infoseg",
-  "version": "1.1",
-  "description": "Renovador sessão Infoseg.",
+  "name": "Renovador sessão Infoseg e PPE.",
+  "version": "1.2",
+  "description": "Renovador sessão Infoseg e PPE.",
   "permissions": [
     "activeTab",
-    "https://infoseg.sinesp.gov.br/infoseg2/*"
+    "https://infoseg.sinesp.gov.br/infoseg2/*",
+    "https://ppe.sinesp.gov.br/ppe/*"
   ],
   "background": {
     "scripts": ["background.js"],
@@ -13,7 +14,10 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://infoseg.sinesp.gov.br/infoseg2/*"],
+      "matches": [
+        "https://infoseg.sinesp.gov.br/infoseg2/*",
+        "https://ppe.sinesp.gov.br/ppe/*"
+      ],
       "js": ["content.js"]
     }
   ]
